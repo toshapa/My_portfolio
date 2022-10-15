@@ -49,6 +49,7 @@
 }
 
 @import 'variables';
+@import 'mixin';
 
 
 
@@ -64,6 +65,7 @@
     margin: 0 auto;
 }
 
-@import 'blocks/promo.scss';
+@import 'blocks/wrap';
+@import 'blocks/promo';
 @import 'blocks/title';
-@import 'blocks/wrap'
+@import 'blocks/btn'
