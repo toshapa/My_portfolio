@@ -1,0 +1,74 @@
+.aboutMe {
+    margin-top: 80px;
+    
+    &__grid_container {
+        padding: 40px;
+        border-radius: 50px;
+        background-color: $bg_color;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    &__imgMe {
+        max-width: 400px;
+        border-radius: 40px;
+    }
+    &__self {
+        padding-left: 70px;
+    }
+    &__subTitle {
+        font-family: "BanderaProMedium";
+        position: relative;
+        font-size: 20px;
+        z-index: 2;
+        padding-left: 10px;
+        @include circle;
+        &::before {
+            top: -7px;
+        }
+    }
+    &__title {
+        font-size: 36px;
+        font-family: "BanderaPro-Bold";
+        padding-top: 10px;
+    }
+    &__divider {
+        height: 2px;
+        width: 60px;
+        background-color: $main-color;
+        margin-top: 5px;
+    }
+    &__introduction {
+        padding-top: 20px;
+    }
+    &__skill {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 50px;
+        margin-top: 40px;
+    }
+    &__group {
+        display: flex;
+    }
+    &__icon {
+        position: relative;
+        height: 35px;
+        width: 35px;
+        opacity: 70%;
+        
+    }
+    &__skill_circle {
+        position: relative;
+        z-index: 2;
+        @include circle;
+        &::before {
+           top: -10px;
+           left: -10px;
+           width: 45px;
+           height: 45px;
+        }
+    }
+    &__descr {
+        padding-left: 20px;    
+    }
+}
+
