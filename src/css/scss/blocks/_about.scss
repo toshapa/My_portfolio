@@ -39,36 +39,45 @@
     }
     &__introduction {
         padding-top: 20px;
+        font-family: 'BanderaProThin';
+        
+    }
+
+    &__mainTitle {
+        font-family: 'BanderaProHeavy';
+        margin-top: 35px;
+        margin-left: 35px;
     }
     &__skill {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px 50px;
-        margin-top: 40px;
-    }
-    &__group {
-        display: flex;
-    }
-    &__icon {
-        position: relative;
-        height: 35px;
-        width: 35px;
-        opacity: 70%;
+        margin-top: 10px;
         
-    }
-    &__skill_circle {
-        position: relative;
-        z-index: 2;
-        @include circle;
-        &::before {
-           top: -10px;
-           left: -10px;
-           width: 45px;
-           height: 45px;
+        
+        &_place {
+            list-style: none;
+            margin-top: 15px;
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+        &_wrap {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        &_title {
+            padding-left: 20px;
+            font-family: 'BanderaProHeavy';
+        }
+        &_prof,&_subTitle,&_descr {
+            font-family: 'BanderaProThin';
+            padding-left: 20px;
+        }
+        &_prof {
+            font-family: 'BanderaProHeavy';
+            font-size: 12px;
+            
         }
     }
-    &__descr {
-        padding-left: 20px;    
-    }
 }
-
