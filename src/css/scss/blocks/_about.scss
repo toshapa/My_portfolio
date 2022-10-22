@@ -6,10 +6,10 @@
         border-radius: 50px;
         background-color: $bg_color;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 300px 2fr;
     }
     &__imgMe {
-        max-width: 400px;
+        max-width: 300px;
         border-radius: 40px;
     }
     &__self {
@@ -43,29 +43,69 @@
         
     }
 
-    &__mainTitle {
-        font-family: 'BanderaProHeavy';
-        margin-top: 35px;
-        margin-left: 35px;
-    }
+    
     &__skill {
+        position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 10px;
+        &:nth-child(even) {
+            padding-right: 45px;
+        }
         
-        
-        &_place {
+        & li {
             list-style: none;
-            margin-top: 15px;
-            &:nth-child(1) {
-                margin-top: 0;
+        }
+
+        &_mainTitle {
+            position: relative;
+            font-family: 'BanderaProHeavy';
+            margin-top: 35px;
+            margin-left: 15px;
+            z-index: 2;
+            @include circle;
+            &::before {
+                width: 20px;
+                height: 20px;
+                left: -24px;
+                top: 0;
+                border-radius: 10px;
             }
+            &::after {
+                content: '';
+                position: absolute;
+                height: calc(100% + 5px);
+                width: 1px;
+                background-color: #000;
+                left: calc(0% - 15px);
+                top: 20px;
+            }
+        }
+        &_place {
+            margin-top: 15px;
+            position: relative;
+            &:nth-child(1) {
+                margin-top: 0px;
+            }
+            // &::before {
+            //     position: absolute;
+            //     content: '';
+            //     height: 100%;
+            //     width: 1px;
+            //     background-color: #000;
+            //     left: 0%;
+            // }
         }
         &_wrap {
             display: flex;
             flex-direction: row;
-            
+            position: relative;    
         }
+        
+        &_column {
+            position: relative;
+        }
+        
         &_title {
             padding-left: 20px;
             font-family: 'BanderaProHeavy';
@@ -79,5 +119,53 @@
             font-size: 12px;
             
         }
+        &_descr {
+            font-size: 15px;
+        }
+        &_icon {
+            margin-left: 30px;
+            z-index: 2;
+            position: relative;
+            @include circle;
+            &::before {
+                width: 15px;
+                height: 15px;
+                top: 2px;
+                left: -4px;
+                border-radius: 7px;
+            }
+        }
+        &_divider {
+            position: absolute;
+            height: 1px;
+            width: 26px;
+            background-color: #000;
+            margin-top: 9px;
+            left: -30px;
+        }
     }
 }
+
+#heightLine {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    // &:nth-child(1) {
+    //     background-color: #786;
+    // }
+}
+
+li #heightLine {
+    &:nth-last-child(-n+1) {
+        
+        background-color: red;
+    }
+}
+// #heightLine:nth-last-child(3) {
+//         background-color: #009;
+// }
+    
+// #education .aboutMe__skill_place:nth-child(2) {
+//     width: 0;
+// }
