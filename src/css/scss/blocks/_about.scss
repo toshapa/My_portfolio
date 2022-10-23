@@ -148,24 +148,16 @@
 
 #heightLine {
     position: absolute;
-    height: 100%;
+    height: calc(100% + 15px);
+    top: 10px;
     width: 1px;
     background-color: #000;
-    // &:nth-child(1) {
-    //     background-color: #786;
-    // }
 }
 
-li #heightLine {
-    &:nth-last-child(-n+1) {
-        
-        background-color: red;
-    }
+li:nth-last-child(-n+1) #heightLine {
+    width: 0;
 }
-// #heightLine:nth-last-child(3) {
-//         background-color: #009;
-// }
-    
-// #education .aboutMe__skill_place:nth-child(2) {
-//     width: 0;
-// }
+
+// #heightLine:nth-last-child(-n+1) {
+//         background-color: red;
+//     }

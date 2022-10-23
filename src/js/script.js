@@ -3,7 +3,14 @@ let closeElem = document.querySelector('.menu__close_btn');
 let menuOverlay = document.querySelector('.menu__overlay')
 let menu = document.querySelector('.menu');
 
-let lastline = document.querySelectorAll('.aboutMe__skill_heightLine');
+let lastline = document.querySelectorAll('#heightLine');
+// console.log(lastline);
+
+
+
+let ulFirstBlock = document.querySelectorAll('ul')
+console.log(ulFirstBlock)
+console.log(ulFirstBlock[1].children[4].children[0].childNodes[1])
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
@@ -18,8 +25,7 @@ closeElem.addEventListener('click', () => {
     menuOverlay.classList.remove('active');
 });
 
-let line = lastline[lastline.length - 1];
-line.style.width = '0px';
 
+// ulFirstBlock[1].children[4].children[0].childNodes[1].style.width = '0px';
 
 
