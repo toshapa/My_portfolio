@@ -51,12 +51,10 @@
                 </div>
                 <nav>
                     <ul class="menu__list">
-                        <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-                        <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-                        <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                        <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-                        <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                        <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                        <li class="menu__link"><a href="#aboutMe">ПРО СЕБЕ</a></li>
+                        <li class="menu__link"><a href="#skill">МОЇ НАВИЧКИ</a></li>
+                        <li class="menu__link"><a href="#portfolio">МОЇ РОБОТИ</a></li>
+                        <li class="menu__link"><a href="#contacts">КОНТАКТИ</a></li>
                     </ul>
                 </nav>
                 <div class="menu__social">
@@ -87,7 +85,7 @@
                 <h1 class="title title__fz48 promo__title">Я WEB-разработчик, из города Киева</h1>
             </div>
             <div class="promo__buttons wrap wrap__btn">
-                <a href="#portfolio" class="promo__link button">Портфолио</a>
+                <a href="#portfolio" class="promo__link">Портфолио</a>
                 <a href="#aboutMe" class="promo__link">Про меня</a>
             </div>
         </div>
@@ -221,7 +219,7 @@
             </div>
         </div>
     </section>
-    <section class="skill">
+    <section class="skill" id="skill">
         <div class="container">
             <div class="skill__miniTitle">Навички</div>
             <h2 class="skill__title">Що я можу використовую в роботі</h2>
@@ -272,7 +270,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contacts">
         <div class="container">
             <div class="contact__gridWrapper">
                 <div class="contact__myPhoto">
@@ -312,21 +310,21 @@
                         Або залиште ваші дані і я сама вам напишу:
                     </div>
 
-                    <form action="#" class="contact__form">
+                    <form action="#" class="contact__form" method='POST'>
                         <div class="contact__input">
-                            <input name="name" id="name" type="text">
-                            <label for="name">Ваше ім'я</label>
+                            <input name="name" id="name" type="text" class="require">
+                            <label for="name" class="_email">Ваше ім'я</label>
                         </div>
                         <div class="contact__input">
-                            <input name="email" id="email" type="email">
-                            <label for="email">Ваша пошта</label>
+                            <input name="email" id="email" type="email" class="require _email">
+                            <label for="email" class=" _email ">Ваша пошта</label>
                         </div>
 
                         <div class="contact__textarea">
-                            <textarea name="name" id="text"></textarea>
-                            <label for="text">Ваше повідомлення</label>
+                            <textarea name="message" id="text" class="require"></textarea>
+                            <label for="text" class=" _email _error">Ваше повідомлення</label>
                         </div>
-                        <button class="button">Надіслати повідомлення</button>
+                        <button class="button" type="submit" >Надіслати повідомлення</button>
                     </form>
                 </div>
             </div>
@@ -334,7 +332,7 @@
     </section>
 
 
-
+    <!-- <script src="phpMailler/send.php"></script> -->
     <script src="js/script.js"></script>
 </body>
 </html>

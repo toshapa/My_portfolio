@@ -35,5 +35,6 @@
     "last 1 version",
     "> 1%",
     "IE 11"
-  ]
+  ],
+  "phpmailer/phpmailer": "^6.5"
 }

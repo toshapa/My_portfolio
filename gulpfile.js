@@ -1,4 +1,4 @@
-const gulp = require ('gulp')
+const gulp = require ('gulp');
 const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')(require('sass'))
 const rename = require("gulp-rename")
@@ -6,10 +6,11 @@ const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const browserslist = require('browserslist')
 const autoPrefixer = require('gulp-autoprefixer')
-
+// const watch = require('gulp');
 
 gulp.task('server', () => {
     browserSync.init({
+        browser: 'google chrome',
         server: {
             baseDir: "src"
         }
@@ -32,9 +33,10 @@ gulp.task('styles', () =>{
 })
 
 gulp.task('watch', () => {
-    gulp.watch('src/css/scss/**/*.+(scss|sass)', gulp.parallel('styles')).on('change', browserSync.reload)
-    gulp.watch('src/*.html').on('change', browserSync.reload)
-    gulp.watch('src/js/*.js', { events: 'all' }).on('change', browserSync.reload);
+    gulp.watch('src/css/scss/**/*.+(scss|sass)', gulp.parallel('styles')).on('change', browserSync.reload);
+    gulp.watch('src/*.html').on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js', { events: 'all' }).on('change', browserSync.reload);
+    gulp.watch('src/**/*.php').on('change', browserSync.reload);
 })
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles'))
+gulp.task('default', gulp.parallel('watch', 'server', 'styles'));

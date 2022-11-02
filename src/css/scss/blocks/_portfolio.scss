@@ -26,12 +26,12 @@
         column-gap: 30px;
         row-gap: 30px;
         img {
-            border: 5px solid transparent;
+            border: 10px solid transparent;
             border-radius: 15px;
             transition: border 0.5s;
             &:hover {
                 // transition-duration: 0.5s;
-                border: 5px solid $bg-color;
+                border: 10px solid $bg-color;
                 // transform: scale(1.2);
             }
         }
